@@ -1,0 +1,47 @@
+{% load static %}
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponto eletrônico</title>
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    {% bootstrap_css %}
+</head>
+
+<body>
+
+    <div class="painel">
+
+        <div class="painel-conteudo">
+            <div class="logo">
+
+            </div>
+            <div class="formulario">
+                <div class="container">
+                    <h1 class="text-center">Sistema de Ponto Eletrônico</h1>
+                    <form action="{% url 'index' %}" method="POST" class="form" autocomplete="off">
+                        
+                        {% csrf_token %}
+                        {% bootstrap_form form %}
+                        {% bootstrap_messages %}
+
+                        <button type="submit" class="btn btn-primary">Conectar</button>
+                       
+                      
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    {% bootstrap_javascript jquery='full' %}
+
+</body>
+
+</html>

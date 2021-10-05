@@ -1,0 +1,192 @@
+
+
+body{
+
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#container{
+
+    width: 100vw;
+    height: 100vh;
+    min-width: 800px; 
+   
+}
+
+#cabecalho{
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 13%;
+    background-image: linear-gradient(blue, rgb(81, 81, 206))
+    
+}
+
+#area-titulo{
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0 auto;
+   font-size: 25px;
+   color: white;
+}
+
+#conteudo-principal{
+
+    width: 100%;
+    height: 87%;
+    clear: both;
+}
+
+#logo-usuario{
+
+    width: 15%;
+    height: 100%;
+    background: rgb(0, 0, 170);
+}
+
+#menu{
+
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height: 100%;
+    box-shadow: 0px 10px 6px black;
+    background: white;
+    float: left;
+}
+
+#menu a{
+
+    display: flex;
+   
+}
+
+#area-tabela{
+
+    width: 85%;
+    overflow-y:auto;
+    height: 80%;
+    background: rgba(209, 207, 207, 0.1);
+    float: right;
+   
+}
+
+#area-btn-cadastrar{
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 85%;
+    height: 20%;
+    background: rgba(209, 207, 207, 0.1);
+    float: right;
+}
+
+#logo-btn{
+
+    margin-right: 10px;
+}
+
+
+.ativado{
+
+    background: rgba(0, 242, 250, 0.2);
+    border-radius: 5px;
+
+}
+
+/* css da tabela */
+
+
+table {
+
+    width: 99%;
+    border-collapse: collapse;
+    margin: 7px;
+}
+
+table a{
+
+    text-decoration: none;
+}
+tr{
+
+    
+    border-bottom: 1px solid #ddd;
+    height: 40px;
+}
+
+th{
+
+   
+  
+    padding: 10px;
+    text-align: center;
+    background: rgb(46, 46, 255);
+    color: white;
+
+}
+
+td{
+
+    padding: 5px;
+    text-align: center;
+
+}
+
+
+/* CSS dos botoes editar e excluir */
+
+.btn-editar{
+
+    text-decoration: none;
+    background: rgb(33, 128, 4);
+    margin: 2px;
+    padding: 6px 5px;
+    color: white;
+}
+
+.btn-excluir{
+
+    text-decoration: none;
+    background: rgb(172, 0, 0);
+    margin: 2px;
+    padding: 5px 5px;
+    color: rgba(255, 255, 255, 0.836);
+
+
+}
+
+/* CSS dos botoes so menu */
+.botoes{
+
+    text-decoration: none;
+    text-decoration: none;
+    margin: 2px;
+    padding: 10px;
+    color: blue;
+    text-align: center;
+}
+
+/* CSS do  botao cadastrar*/
+
+.btn-adicionar-funcionario{
+
+    display: block;
+    background: rgb(15, 110, 6);
+    width: 200px;
+    margin-bottom: 10px;
+    height: 40px;
+    color: #ddd;
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4);
+}

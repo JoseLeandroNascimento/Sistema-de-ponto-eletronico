@@ -1,0 +1,65 @@
+{% load static %}
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/css_relatorios.css' %}">
+
+    {% bootstrap_css %}
+</head>
+<body>
+    
+    <div id="header">
+        
+        <a  id="btn-voltar" href="{% url 'administrativo_funcionarios' 'funcionario' %}">Voltar</a>
+        <form action="{% url 'relatorio'%}" method="POST">
+            
+            {% csrf_token %}
+            
+            <select name="opcao" id="selecao-filter">
+                <option value="full">Todos</option>
+                <option value="funcionario">Funcionário</option>
+                <option value="entrada">Entrada</option>
+                <option value="saida">Saída</option>
+            </select>
+            <div id="area-entrada-busca">
+                <input type="search" name="campo-busca" id="campo-busca" di>
+            </div>
+            <button type="submit" id="btn-busca" class="btn btn-warning btn-sm">Buscar</button>
+            
+        </form>
+    </div>
+    <div class="container">
+        
+        <table class="table">
+            
+            <tr id="header-table">
+                <th>Data</th>
+                <th>Funcionário</th>
+                <th>Status</th>
+                <th>Entrada</th>
+                <th>Saída</th>
+                
+            </tr>
+            
+            {% for dados in historico %}
+            
+            <tr>
+                <td>{{dados.data}}</td>
+                <td>{{dados.funcionario}}</td>
+                    <td>{{dados.status}}</td>
+                    <td>{{dados.entrada}}</td>
+                    <td>{{dados.saida}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        
+        {% bootstrap_javascript jquery="full"%}
+        <script src="{% static 'js/script.js' %}"></script>
+    </body>
+    </html>

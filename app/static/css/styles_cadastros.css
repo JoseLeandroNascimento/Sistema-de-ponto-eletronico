@@ -1,0 +1,19 @@
+
+body{
+
+    margin: 0px;
+    padding: 0px;
+}
+
+.header{
+
+    background-color: royalblue;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+h1{
+
+    text-align: center;
+    color: #fff;
+}

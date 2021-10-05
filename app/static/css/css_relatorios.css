@@ -1,0 +1,62 @@
+
+body{
+
+    margin: 0px;
+    padding: 0px;
+}
+
+form{
+
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+#header{
+    position: relative;
+    height: 80px;
+    background: blue;
+
+}
+#header-table{
+
+    background: blue;
+    color: white;
+}
+
+#btn-voltar{
+
+    color: white;
+    margin-left: 10px;
+}
+
+#area-entrada-busca{
+
+    display: inline;
+}
+
+
+#selecao-filter{
+
+    border: none;
+    border-radius: 5px;
+    outline: none;
+
+}
+
+#campo-busca{
+
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+    
+
+}
+
+#btn-busca{
+
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
